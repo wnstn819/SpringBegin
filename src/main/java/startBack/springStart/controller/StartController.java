@@ -11,6 +11,7 @@ public class StartController {
     @GetMapping("start")
     public String start(Model model){
         model.addAttribute("data", "start!");
+        model.addAttribute("data2","welcom!");
         return "start";
     }
 }
