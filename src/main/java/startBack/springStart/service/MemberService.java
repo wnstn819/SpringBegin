@@ -8,13 +8,12 @@ import startBack.springStart.repository.MemoryMemberRepository;
 
 import java.util.*;
 
-@Service
 public class MemberService {
 
     //private final MemberRepository memberRepository = new MemberRepository(); -> 이렇게 하면 의존성 주입이 안됨
     private final MemberRepository memberRepository;
 
-    @Autowired
+
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
