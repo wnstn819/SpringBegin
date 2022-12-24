@@ -1,9 +1,11 @@
 package startBack.springStart.repository;
 
+import org.springframework.stereotype.Repository;
 import startBack.springStart.domain.Member;
 
 import java.util.*;
 
+@Repository
 public interface MemberRepository {
     Member save(Member member); // 저장소에 저장
     Optional<Member> findById(Long id); // 아이디로 찾기
