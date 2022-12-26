@@ -3,6 +3,7 @@ package startBack.springStart;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import startBack.springStart.repository.JdbcMemberRepository;
+import startBack.springStart.repository.JdbcTemplateMemberRepository;
 import startBack.springStart.repository.MemberRepository;
 import startBack.springStart.service.MemberService;
 
@@ -27,7 +28,10 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository(){
-        return new JdbcMemberRepository(dataSource);
+
+
+        //return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 
 }
