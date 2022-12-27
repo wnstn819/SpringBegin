@@ -2,12 +2,14 @@ package startBack.springStart.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import startBack.springStart.domain.Member;
 import startBack.springStart.repository.MemberRepository;
 import startBack.springStart.repository.MemoryMemberRepository;
 
 import java.util.*;
 
+@Transactional
 public class MemberService {
 
     //private final MemberRepository memberRepository = new MemberRepository(); -> 이렇게 하면 의존성 주입이 안됨

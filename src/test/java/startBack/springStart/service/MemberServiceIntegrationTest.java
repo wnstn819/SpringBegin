@@ -3,6 +3,7 @@ package startBack.springStart.service;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 import startBack.springStart.domain.Member;
 import startBack.springStart.repository.MemberRepository;
@@ -23,7 +24,7 @@ public class MemberServiceIntegrationTest {
     void 회원가입() {
         //given - 뭔가가 주어졌을 때
         Member member = new Member();
-        member.setName("spring");
+        member.setName("spring100");
 
         //when - 이것을 실행했을 때
         Long saveId = memberService.join(member);
