@@ -3,6 +3,7 @@ package startBack.springStart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import startBack.springStart.aop.TimeTraceAop;
 import startBack.springStart.repository.MemberRepository;
 import startBack.springStart.service.MemberService;
 
@@ -23,6 +24,8 @@ public class SpringConfig {
     public MemberService memberService(){
         return new MemberService(memberRepository);
     }
+
+
 //    private EntityManager em;
 //
 //    @Autowired
